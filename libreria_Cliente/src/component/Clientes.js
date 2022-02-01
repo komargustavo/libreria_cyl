@@ -1,11 +1,14 @@
 import { useNavigate } from "react-router-dom"
 import axios from 'axios'
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 
-const Clientes = ({ cliente }) => {
+const Clientes = ({ cliente, key }) => {
     const navigate = useNavigate()
+const [clienteActulizado, setClienteActualizado]=useState(cliente)
 
-    const { _id, nombre, telefono, email, direccion, password } = cliente
+console.log(clienteActulizado)
+    
+const { _id, nombre, telefono, email, direccion, password } = cliente
     const id = toString(_id)
 
     const eliminarCilente= async(id)=>{
@@ -14,6 +17,8 @@ const Clientes = ({ cliente }) => {
             try {
                 console.log(id)
                 const respuesta = await axios.delete(`http://localhost:3001/clientes/delete/${id}`)
+                console.log(respuesta.data)
+                //setClienteActualizado(respuesta.data)
                 window.location.reload(true)
             } catch (error) {
                 console.log(error);
@@ -26,7 +31,7 @@ const Clientes = ({ cliente }) => {
         <tr className=" my-10 border hover:bg-gray-300 ">
             <td className=" p-6 uppercase">{nombre}</td>
             <td className=" uppercase ">
-                <p className="text-2xl"><span className="text-gray-600  text-2xl font-black">E-mail: </span>{email}</p>
+                <p className="text-2xl" ><span className="text-gray-600  text-2xl font-black">E-mail: </span>{email}</p>
                 <p className="text-2xl"><span className="text-gray-600  text-2xl font-black">Tel: </span>{telefono}</p>
             </td>
             <td className=" text-center uppercase">{direccion}</td>

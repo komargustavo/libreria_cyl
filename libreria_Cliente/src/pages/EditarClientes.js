@@ -58,7 +58,7 @@ const EditarClientes = ({ estado, cambiarEstado }) => {
     return (
         <>
             <>
-                <div className=" xl:container bg-white mt-10 px-5 py-10 rounded-md shadow-2xl mx-auto">
+                <div className=" xl:container bg-white my-20 px-5 py-10 rounded-md shadow-2xl mx-auto">
                     <div className=" container mx-auto flex justify-between items-center text-red-800 border-b-2 pb-4">
                         <h2 className=" text-center my-8">Actualizar datos del cliente</h2>
                         <Link to="/ListaClientes" onClick={() => cambiarEstado(!estado)} >

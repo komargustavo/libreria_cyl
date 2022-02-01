@@ -25,8 +25,6 @@ const LoginCliente = ({ estado, cambiarEstado }) => {
         }),
         onSubmit: async (values, { resetForm }) => {
             if (emailAdmin === values.email && passAdmin === values.password) {
-                console.log(values.email)
-                console.log(values.password)
                 console.log('usuario logueado como administrador')
                 setCondicion(true)
                 cambiarEstado(false)
@@ -35,6 +33,7 @@ const LoginCliente = ({ estado, cambiarEstado }) => {
                     const response = await axios.post('http://localhost:3001/clientes/login', values)
                     localStorage.setItem('autenticacion',response.data.token)
                     resetForm();
+                    
 
                 } catch (error) {
                     console.log(error);

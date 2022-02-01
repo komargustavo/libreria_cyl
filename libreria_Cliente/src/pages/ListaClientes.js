@@ -22,7 +22,7 @@ const ListaClientes = ({ estado, cambiarEstado }) => {
     }, [])
     return (
         <>
-            <div className=" bg-white container mx-auto p-6 mt-10 rounded-2xl">
+            <div className=" bg-white container mx-auto p-6 my-20 rounded-2xl">
                 <div className="flex justify-between ">
                 <h2 className=" font-black text-4xl text-blue-900">Administrar Clientes</h2>
                 <Link to="/" onClick={() => cambiarEstado(!estado)} >
