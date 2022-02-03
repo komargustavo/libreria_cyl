@@ -19,7 +19,6 @@ import EditarClientes from './pages/EditarClientes'
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      {/* <App/> */}
       <Routes>
         <Route path='/' element={<App />}>
           <Route index element={<Inicio />} />

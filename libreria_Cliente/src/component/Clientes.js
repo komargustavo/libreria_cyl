@@ -5,9 +5,6 @@ import { useEffect, useState } from "react"
 const Clientes = ({ cliente, key }) => {
     const navigate = useNavigate()
 const [clienteActulizado, setClienteActualizado]=useState(cliente)
-
-console.log(clienteActulizado)
-    
 const { _id, nombre, telefono, email, direccion, password } = cliente
     const id = toString(_id)
 

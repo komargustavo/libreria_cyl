@@ -4,7 +4,8 @@ import * as Yup from "yup"
 import axios from 'axios'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle } from "@fortawesome/free-regular-svg-icons";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { LogContext } from "../Context/Context";
 import ListaClientes from "../pages/ListaClientes";
 
 
@@ -12,6 +13,8 @@ const LoginCliente = ({ estado, cambiarEstado }) => {
     const emailAdmin = process.env.REACT_APP_ADMIN_EMAIL
     const passAdmin = process.env.REACT_APP_ADMIN_PASS
     const [condicion, setCondicion] = useState(false)
+    const { loggedIn, setLoggedIn } = useContext(LogContext)
+
     const formik = useFormik({
 
 
@@ -36,11 +39,12 @@ const LoginCliente = ({ estado, cambiarEstado }) => {
                     
 
                 } catch (error) {
+                    window.alert('Usuario o Contraseña incorrecto')
                     console.log(error);
                 }
-
-                //alert(JSON.stringify(values, null, 2));
             }
+            setLoggedIn((prevState)=>!prevState)
+            
         },
 
     });
@@ -48,7 +52,7 @@ const LoginCliente = ({ estado, cambiarEstado }) => {
 
     return (
         <>
-            
+            {loggedIn===false && <app/>}
             {condicion ? <ListaClientes /> :<>
                 < div className=" w-screen h-screen fixed top-0 left-0 bg-yellow-200 flex items-center justify-center">
                 <div className=" w-4/12 h-auto relative bg-white rounded-md shadow-inherit p-5">
