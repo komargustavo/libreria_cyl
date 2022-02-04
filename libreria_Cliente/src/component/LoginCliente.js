@@ -42,8 +42,9 @@ const LoginCliente = ({ estado, cambiarEstado }) => {
                     window.alert('Usuario o Contraseña incorrecto')
                     console.log(error);
                 }
+                setLoggedIn((prevState)=>!prevState)
             }
-            setLoggedIn((prevState)=>!prevState)
+            
             
         },
 

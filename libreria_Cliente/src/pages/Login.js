@@ -1,16 +1,20 @@
+import { useState, useContext } from "react";
+import { LogContext } from "../Context/Context";
 import LoginCliente from "../component/LoginCliente"
-import { useState } from "react"
+import Articulos from "../pages/Articulos"
 
 
 const Login = () => {
     const [estadoModal, cambiarEstadoModal] = useState(true)
+    const { loggedIn, setLoggedIn } = useContext(LogContext)
 
     return (
         <>
-            <LoginCliente
+            {loggedIn ? <Articulos /> : <LoginCliente
                 estado={estadoModal}
                 cambiarEstado={cambiarEstadoModal}
-            />
+            />}
+
         </>
     )
 }
