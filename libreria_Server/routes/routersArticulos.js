@@ -5,8 +5,8 @@ const {verifyToken} = require('../validate/validations')
 
 
 //*** PETICION GET ***/
-// userRouter.get('/allArticulos',verifyToken, allArticulos);
-userRouter.get('/allArticulos', allArticulos);
+userRouter.get('/allArticulos',verifyToken, allArticulos);
+// userRouter.get('/allArticulos', allArticulos);
 userRouter.get('/articulos/:id', articuloById);
 userRouter.get('/articulos/precio/:precio', articuloByPrecio)
 userRouter.get('/articulos/nombre/:nombre', articuloByName);

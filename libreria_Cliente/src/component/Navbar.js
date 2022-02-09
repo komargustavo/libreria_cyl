@@ -21,9 +21,8 @@ const Navbar = () => {
                         <Link className="hover:bg-orange-500 hover:text-white hover:rounded-lg text-w md:inline block p-4" to="/servicios">Servicios</Link>
                         <Link className="hover:bg-orange-500 hover:text-white hover:rounded-lg text-w md:inline block p-4" to="/articulos">articulos</Link>
                         <Link className="hover:bg-orange-500 hover:text-white hover:rounded-lg text-w md:inline block p-4" to="/contacto">Correo</Link>
-                        {loggedIn ? <Link onClick={()=>{setLoggedIn((prevState)=>!prevState)}} className="bg-orange-500 text-white rounded-lg p-4" to="/">Logout</Link> : <Link className="bg-orange-500 text-white rounded-lg p-4" to="/login">Login</Link>}
-                        {/* <Link className="bg-orange-500 text-white rounded-lg p-4" to="/login">Login</Link> */}
-                        {/* <Link className="bg-orange-500 text-white rounded-lg p-4" to="/ListaClientes">Clientes</Link> */}
+                        {loggedIn ? <Link onClick={()=>{setLoggedIn((prevState)=>!prevState)
+                        localStorage.clear()}} className="bg-orange-500 text-white rounded-lg p-4" to="/">Logout</Link> : <Link className="bg-orange-500 text-white rounded-lg p-4" to="/login">Login</Link>}
                     </nav>
                     <div className="carrito">
                         <div id="total-productos"></div><Link to="/articulos" id="img-carrito">
@@ -32,7 +31,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </div >
-            {loggedIn ? <p className=" text-2xl font-bold m-4 uppercase text-right">Bienvenido</p> : <p className=" text-2xl font-bold m-4 uppercase text-right">Para hacer compras debe realizar el Login</p>}
+            {loggedIn ? <p className=" text-3xl font-bold m-4 uppercase text-right">Bienvenido</p> : <p className=" text-3xl font-bold m-4 uppercase text-right">Para hacer compras debe realizar el Login a la página</p>}
         </>
     )
 }
