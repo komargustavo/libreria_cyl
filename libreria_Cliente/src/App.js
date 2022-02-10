@@ -11,7 +11,6 @@ import { useState } from "react";
 function App() {
   const [loggedIn, setLoggedIn] = useState(false)
 
-
   return (
     <div className="site-header ">
       <LogContext.Provider value={{ loggedIn, setLoggedIn }}>
