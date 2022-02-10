@@ -7,7 +7,7 @@ import { faFacebook, faWhatsappSquare } from '@fortawesome/free-brands-svg-icons
 const Footer = () => {
     return (
         <>
-            <footer className="sitio-fin bottom-0 left-0">
+            <footer className="sitio-fin bottom-0 w-full">
                 <div className=' container mx-auto grid grid-cols-2'>
                     <div className='w-1/4'>
                         <div id="copyright">Copyright&copy; 2022 - Todos los derechos reservados</div>
