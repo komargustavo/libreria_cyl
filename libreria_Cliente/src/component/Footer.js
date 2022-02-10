@@ -12,7 +12,6 @@ const Footer = () => {
                     <div className='w-1/4'>
                         <div id="copyright">Copyright&copy; 2022 - Todos los derechos reservados</div>
                     </div>
-
                     <div className="text-5xl  w-1/4" >
                         <p className=" text-white text-3xl  text-center">Comunicate con nosotros</p>
                         <div className='flex justify-center pt-4'>
@@ -30,7 +29,6 @@ const Footer = () => {
                     </div>
                 </div>
             </footer>
-
         </>)
 };
 
