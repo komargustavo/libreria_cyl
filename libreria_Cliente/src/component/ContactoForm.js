@@ -77,7 +77,7 @@ const Contacto = ({ estado, cambiarEstado }) => {
                 <div className="mb-4">
                     <label
                         className=" text-4xl text-blue-900 uppercase"
-                        htmlFor="notas"
+                        htmlFor="texto"
                     >Notas:</label>
                     <input className="mt-2 block  text-2xl w-full h-40 p-3 bg-gray-100 rounded-lg"
 

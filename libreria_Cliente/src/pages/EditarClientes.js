@@ -21,7 +21,7 @@ const EditarClientes = ({ estado, cambiarEstado }) => {
             }
         }
         ObtenerCliente()
-    }, [])
+    }, [clientes])
     const formik = useFormik({
         enableReinitialize: true,
         initialValues: {
