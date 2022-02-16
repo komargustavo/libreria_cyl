@@ -11,6 +11,7 @@ import anillados from "../img/anillados.jpg"
 
 
 const InicioPages = () => {
+    localStorage.clear()
     useEffect(() => {
         Aos.init({ duration: 1000 })
     }, [])
